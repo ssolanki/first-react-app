@@ -1,6 +1,7 @@
 const { resolve } = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 const srcDir = resolve(__dirname, 'src')
 
@@ -25,22 +26,14 @@ module.exports = {
       exclude: /node_modules/
     }, {
       test: /\.css$/,
-      use: [{
-        loader: 'style-loader'
-      }, {
-        loader: 'css-loader',
-        options: {
-          modules: true,
-          localIdentName: '[name]-[local]-[hash:base64:6]',
-          camelCase: true
-        }
-      }]
+      use: ExtractTextPlugin.extract(['css-loader?modules,localIdentName="[name]-[local]-[hash:base64:6]",camelCase'])
     }]
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: `${srcDir}/index.html`
     }),
+    new ExtractTextPlugin('style.[chunkhash:6].css'),
     new DashboardPlugin()
   ]
 }
