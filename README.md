@@ -1,7 +1,9 @@
 # First React App
 
-## Setup and Build
+### 1. Setup and Build
+
   Make sure you have npm and node installed on your system.
+
     1. npm install -g yarn
     2. yarn install
     3. yarn run start
