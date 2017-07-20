@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { Link } from 'react-router-dom'
+import '../../base.css'
 import styles from './Header.css'
-
 
 const Header = () => (
   <header className={styles.header}>

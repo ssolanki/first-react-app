@@ -5,9 +5,6 @@ import Home from '../Home/Home'
 import SearchedProfiles from '../SearchedProfiles/SearchedProfiles'
 import NotFound from '../NotFound/NotFound'
 
-const profiles = [{name: 'User1', stars: '20', username: 'user1'}, {name: 'User2', stars: '10', username: 'user2'}]
-console.log(profiles)
-
 const Routes = () => (
   <div>
     <Switch>
