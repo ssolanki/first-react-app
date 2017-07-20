@@ -1,0 +1,20 @@
+.githubLink{
+  color: #1b4e8f;
+}
+.githubLink:hover{
+  text-decoration: none;
+}
+.avatar{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.name{
+  margin-left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.info{
+  margin-left: 10px;
+
+}
