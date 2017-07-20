@@ -14,7 +14,7 @@ const SearchBox = ({text, id, onSubmit, onChange}) => (
   <div>
     <Form horizontal className='commentForm form-horizontal' onSubmit={(e) => {e.preventDefault(); onSubmit(id);}}>
       <FormGroup controlId='formHorizontalName'>
-        <Col sm={4}>
+        <Col sm={4} className={styles.right}>
           <ControlLabel> Github Username </ControlLabel>
         </Col>
         <Col sm={8}>

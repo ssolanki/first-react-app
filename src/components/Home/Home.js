@@ -17,7 +17,7 @@ class Home extends React.Component {
         id: 2,
         text: ''
       },
-      userPairs: []
+      userPairs: JSON.parse(localStorage.getItem('searchedPairs')) || []
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -84,7 +84,6 @@ class Home extends React.Component {
         const newState = this.state
         if(newState.user1 && newState.user2){
           let newPair = {user1: newState.user1, user2: newState.user2}
-          console.log(newState.userPairs, newPair)
           this.setState({
             ...newState,
             textbox1: {
@@ -99,20 +98,21 @@ class Home extends React.Component {
             user2: null,
             userPairs: [newPair].concat(newState.userPairs.filter(userPair => newPair.user1 && newPair.user2 && (userPair.user1.id !== newPair.user1.id || userPair.user2.id !== newPair.user2.id)))
           })
+          localStorage.setItem('searchedPairs',JSON.stringify(this.state.userPairs))
         }
-        console.log(this.state, this.state.userPairs)
       })
   }
 
   render() {
-    const { textbox1, textbox2 } = this.state
+    const { textbox1, textbox2, userPairs } = this.state
     return (
-      <div>
+      <div className={styles.container}>
+        <h3 className={styles.totalCount}> Total Pairs: {userPairs.length} </h3>
         <div className={styles.searchBox}>
-          <Col componentClass={ControlLabel} smOffset={2} sm={4}>
+          <Col componentClass={ControlLabel} sm={6}>
             <SearchBox id={textbox1.id} text={textbox1.text} onSubmit={this.handleSubmit} onChange={this.handleChange} />
           </Col>
-          <Col componentClass={ControlLabel} sm={4}>
+          <Col componentClass={ControlLabel} sm={6}>
             <SearchBox id={textbox2.id} text={textbox2.text} onSubmit={this.handleSubmit} onChange={this.handleChange} />
           </Col>
         </div>

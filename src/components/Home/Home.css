@@ -1,3 +1,14 @@
 .searchBox{
   margin-top: 30px;
 }
+.totalCount{
+  color: red;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: right;
+}
+.container {
+  max-width: var(--site-width);
+  width: var(--content-width);
+  margin: 0 auto;
+}
