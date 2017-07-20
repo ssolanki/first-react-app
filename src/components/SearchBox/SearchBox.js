@@ -21,7 +21,7 @@ const SearchBox = ({text, id, onSubmit, onChange}) => (
           <FormControl
             type='text'
             autoComplete='off'
-            placeholder='enter github username'
+            placeholder='Enter Github Username'
             value={text}
             onChange={(e) => onChange(e.target.value, id)}
           />

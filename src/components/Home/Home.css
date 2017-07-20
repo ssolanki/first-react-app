@@ -1,5 +1,6 @@
 .searchBox{
   margin-top: 30px;
+  font-weight: normal;
 }
 .totalCount{
   color: red;
@@ -11,4 +12,14 @@
   max-width: var(--site-width);
   width: var(--content-width);
   margin: 0 auto;
+}
+.profiles{
+  margin-top: 50px;
+}
+.seperatorText{
+  text-align: center;
+  color: #337ab7;
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 140px;
 }

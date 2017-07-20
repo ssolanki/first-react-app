@@ -1,0 +1,48 @@
+.userProfile{
+  border: 1px solid #ccc;
+  background: #fff;
+  font-weight: normal;
+  max-width: 450px;
+  margin: 0 auto;
+  border-radius: 3px;
+}
+.basicInfo{
+  text-align: center;
+}
+.basicInfo img{
+  width: 100px;
+  height: 100px;
+  margin-top: 25px;
+  border-radius: 50%;
+}
+.basicInfo h3{
+  color: #266cba;
+  font-size: 24px;
+  margin: 15px 0px 5px;
+}
+.basicInfo p{
+  color: #b1b1b1;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+.otherInfo{
+  background: #1b4e8f;
+  padding: 15px 12.5%;
+  text-align: center;
+}
+.otherInfo label{
+  margin-bottom: 0px;
+}
+.otherInfo .count{
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 0px;
+}
+.otherInfo .text{
+  font-size: 16px;
+  color: #d8ff00;
+  margin-bottom: 0px;
+}
+.githubLink:hover{
+  text-decoration: none;
+}
