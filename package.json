@@ -3,6 +3,8 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "build": "webpack --config=webpack.config.prod.js -p",
+    "deploy": "surge --project dist --domain https://ssolanki.surge.sh",
     "start": "webpack-dashboard -- webpack-dev-server"
   },
   "devDependencies": {

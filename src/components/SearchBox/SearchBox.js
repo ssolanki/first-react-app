@@ -12,7 +12,7 @@ import Button from 'react-bootstrap/lib/Button'
 
 const SearchBox = ({text, id, onSubmit, onChange}) => (
   <div>
-    <Form horizontal className='commentForm form-horizontal' onSubmit={(e) => {e.preventDefault(); onSubmit(id);}}>
+    <Form horizontal className='commentForm form-horizontal' onSubmit={(e) => { e.preventDefault(); onSubmit(id) }}>
       <FormGroup controlId='formHorizontalName'>
         <Col sm={4} className={styles.right}>
           <ControlLabel> Github Username </ControlLabel>
@@ -44,7 +44,7 @@ const SearchBox = ({text, id, onSubmit, onChange}) => (
 SearchBox.propTypes = {
   text: PropTypes.string,
   onSubmit: PropTypes.func.isRequired,
-  onChange: PropTypes.func.isRequired,
-};
+  onChange: PropTypes.func.isRequired
+}
 
 export default SearchBox

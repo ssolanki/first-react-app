@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/lib/Col'
 import ControlLabel from 'react-bootstrap/lib/ControlLabel'
 
 class Home extends React.Component {
-  constructor() {
+  constructor () {
     super()
     this.state = {
       textbox1: {
@@ -18,13 +18,13 @@ class Home extends React.Component {
         id: 2,
         text: ''
       },
-      userPairs: JSON.parse(localStorage.getItem('searchedPairs')) || []
+      userPairs: JSON.parse(window.localStorage.getItem('searchedPairs')) || []
     }
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
-  handleChange(text, id) {
+  handleChange (text, id) {
     const state = this.state
     switch (id) {
       case 1:
@@ -39,7 +39,7 @@ class Home extends React.Component {
     }
   }
 
-  handleSubmit(id) {
+  handleSubmit (id) {
     let text
     const state = this.state
     switch (id) {
@@ -49,13 +49,13 @@ class Home extends React.Component {
       default:
         text = state.textbox2.text
     }
-    const url = `http://api.github.com/users/${text}`
+    const url = `https://api.github.com/users/${text}`
 
-    fetch(url)
+    window.fetch(url)
       .then(response => response.json())
       .then(data => {
-        let error = false, userFetched = true
-        const {textbox1, textbox2} = this.state
+        let error = false
+        let userFetched = true
 
         const githubUser = {
           id: data.id,
@@ -65,10 +65,10 @@ class Home extends React.Component {
           repos: data.public_repos,
           followers: data.followers,
           following: data.following,
-          location: data.location,
+          location: data.location
         }
 
-        if (!data.id){
+        if (!data.id) {
           error = true
           userFetched = false
         }
@@ -94,7 +94,7 @@ class Home extends React.Component {
         if (!data.id) return false
 
         const newState = this.state
-        if(newState.user1 && newState.user2){
+        if (newState.user1 && newState.user2) {
           let newPair = {user1: newState.user1, user2: newState.user2}
           this.setState({
             ...newState,
@@ -114,18 +114,18 @@ class Home extends React.Component {
             user2: null,
             userPairs: [newPair].concat(newState.userPairs.filter(userPair => newPair.user1 && newPair.user2 && (userPair.user1.id !== newPair.user1.id || userPair.user2.id !== newPair.user2.id)))
           })
-          localStorage.setItem('searchedPairs',JSON.stringify(this.state.userPairs))
+          window.localStorage.setItem('searchedPairs', JSON.stringify(this.state.userPairs))
         }
       })
   }
 
-  render() {
+  render () {
     const { textbox1, textbox2, user1, user2, userPairs } = this.state
     let profile1, profile2
-    if(textbox1.userFetched && textbox2.userFetched) {
+    if (textbox1.userFetched && textbox2.userFetched) {
       profile1 = userPairs[0].user1
       profile2 = userPairs[0].user2
-    }else {
+    } else {
       profile1 = user1
       profile2 = user2
     }

@@ -10,7 +10,7 @@ const Routes = () => (
     <Switch>
       <Route exact path='/' component={Home} />
       <Route path='/searched' component={props => {
-        const searchedPairs = JSON.parse(localStorage.getItem('searchedPairs')) || []
+        const searchedPairs = JSON.parse(window.localStorage.getItem('searchedPairs')) || []
         return <SearchedProfiles userPairs={searchedPairs} />
       }} />
       <Route component={NotFound} />
