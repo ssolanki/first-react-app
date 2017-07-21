@@ -3,10 +3,15 @@
   font-weight: normal;
 }
 .totalCount{
-  color: red;
-  font-size: 20px;
+  color: #af1717;
+  font-size: 18px;
   margin-bottom: 20px;
   text-align: right;
+  font-weight: normal;
+}
+.totalCount span{
+  font-weight: bold;
+  font-size: 20px;
 }
 .container {
   max-width: var(--site-width);

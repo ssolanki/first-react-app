@@ -14,10 +14,10 @@ const SearchBox = ({text, id, onSubmit, onChange}) => (
   <div>
     <Form horizontal className='commentForm form-horizontal' onSubmit={(e) => { e.preventDefault(); onSubmit(id) }}>
       <FormGroup controlId='formHorizontalName'>
-        <Col sm={4} className={styles.right}>
+        <Col md={4} sm={5} className={styles.right}>
           <ControlLabel> Github Username </ControlLabel>
         </Col>
-        <Col sm={8}>
+        <Col md={8} sm={7}>
           <FormControl
             type='text'
             autoComplete='off'
@@ -28,7 +28,7 @@ const SearchBox = ({text, id, onSubmit, onChange}) => (
         </Col>
       </FormGroup>
       <FormGroup controlId='formHorizontalSubmit'>
-        <Col smOffset={4} sm={8}>
+        <Col mdOffset={4} md={6} smOffset={5} sm={7}>
           <Button
             type='submit'
             className='btn btn-primary'

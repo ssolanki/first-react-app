@@ -30,18 +30,24 @@
   margin: 0rem;
 }
 
-.list-item {
-
-}
-
 .link {
-  color: #fff;
+  color: #ccc;
   text-transform: capitalize;
   font-size: 1rem;
   margin-left: 1rem;
+  font-weight: normal;
 }
 
 .link:focus,
 .link:hover {
   color: #24A3CF;
+}
+
+.active{
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.active:focus{
+  color: #fff;
 }

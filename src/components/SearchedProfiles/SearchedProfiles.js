@@ -14,13 +14,13 @@ const SearchedProfiles = ({userPairs}) => {
       {userPairs.length
         ? userPairs.map(userPair => (
           <div key={i++} className={styles.userInfo + ' clearfix'}>
-            <Col smOffset={1} sm={4}>
+            <Col mdOffset={1} md={4} sm={5}>
               <UserProfile id={userPair.user1.id} user={userPair.user1} />
             </Col>
-            <Col componentClass={ControlLabel} sm={1}>
+            <Col componentClass={ControlLabel} md={1} sm={2}>
               <p className={styles.seperatorText}> vs </p>
             </Col>
-            <Col smOffset={1} sm={4}>
+            <Col mdOffset={1} md={4} sm={5}>
               <UserProfile id={userPair.user2.id} user={userPair.user2} />
             </Col>
           </div>

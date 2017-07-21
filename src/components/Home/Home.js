@@ -132,7 +132,7 @@ class Home extends React.Component {
 
     return (
       <div className={styles.container}>
-        <h3 className={styles.totalCount}> Total Pairs: {userPairs.length} </h3>
+        <h3 className={styles.totalCount}> Total Pairs: <span> {userPairs.length} </span> </h3>
         <div className={styles.searchBox + ' clearfix'}>
           <Col componentClass={ControlLabel} sm={6}>
             <SearchBox id={textbox1.id} text={textbox1.text} onSubmit={this.handleSubmit} onChange={this.handleChange} />
