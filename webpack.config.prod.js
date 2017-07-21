@@ -49,6 +49,15 @@ module.exports = {
     new ExtractTextPlugin('style.[chunkhash:6].css'),
     new DashboardPlugin(),
     new OfflinePlugin({
+      safeToUseOptionalCaches: true,
+      externals: [
+        '/'
+      ],
+      ServiceWorker: {
+        events: true,
+        navigateFallbackURL: '/',
+        publicPath: '/sw.js'
+      },
       AppCache: {
         events: true,
         publicPath: '/appcache',
