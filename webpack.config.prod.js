@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const OfflinePlugin = require('offline-plugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const webpack = require('webpack')
 
 module.exports = {
@@ -39,12 +40,6 @@ module.exports = {
   performance: {
     hints: 'error'
   },
-  // resolve: {
-  //   alias: {
-  //     react: 'preact',
-  //     'react-dom': 'preact-compat'
-  //   }
-  // },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
@@ -65,6 +60,13 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       'name': 'vendor'
     }),
-
+    new CopyWebpackPlugin([{
+      from: resolve(__dirname, './src/icons/'),
+      to: resolve(__dirname, './dist/')
+    }, {
+      from: resolve(__dirname, './src/images/'),
+      to: resolve(__dirname, './dist/images')
+    }
+  ])
   ]
 }

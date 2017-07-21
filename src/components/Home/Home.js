@@ -132,28 +132,28 @@ class Home extends React.Component {
 
     return (
       <div className={styles.container}>
-        <h3 className={styles.totalCount}> Total Pairs: <span> {userPairs.length} </span> </h3>
+        <h3 className={styles.totalCount}> Profiles Compared: <span> {userPairs.length} </span> </h3>
         <div className={styles.searchBox + ' clearfix'}>
-          <Col componentClass={ControlLabel} sm={6}>
+          <Col componentClass={ControlLabel} sm={6} xs={12}>
             <SearchBox id={textbox1.id} text={textbox1.text} onSubmit={this.handleSubmit} onChange={this.handleChange} />
           </Col>
-          <Col componentClass={ControlLabel} sm={6}>
+          <Col componentClass={ControlLabel} sm={6} xs={12}>
             <SearchBox id={textbox2.id} text={textbox2.text} onSubmit={this.handleSubmit} onChange={this.handleChange} />
           </Col>
         </div>
         <div className={styles.profiles + ' clearfix'}>
           {profile1 != null &&
-            <Col componentClass={ControlLabel} smOffset={1} sm={5}>
+            <Col componentClass={ControlLabel} smOffset={1} sm={5} xs={12}>
               <Profile user={profile1} />
             </Col>
           }
           {profile1 != null && profile2 != null &&
-            <Col componentClass={ControlLabel} sm={1}>
+            <Col componentClass={ControlLabel} sm={1} xs={12}>
               <p className={styles.seperatorText}> vs </p>
             </Col>
           }
           {profile2 != null &&
-            <Col componentClass={ControlLabel} sm={5}>
+            <Col componentClass={ControlLabel} sm={5} xs={12}>
               <Profile user={profile2} />
             </Col>
           }

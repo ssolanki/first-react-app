@@ -32,9 +32,11 @@
 }
 .otherInfo label{
   margin-bottom: 0px;
+  font-weight: normal;
 }
 .otherInfo .count{
   font-size: 20px;
+  font-weight: bold;
   color: #fff;
   margin-bottom: 0px;
 }
@@ -45,4 +47,20 @@
 }
 .githubLink:hover{
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  .otherInfo{
+    padding: 15px 5px;
+  }
+  .otherInfo .count{
+    font-size: 18px;
+  }
+  .otherInfo .text{
+    font-size: 14px;
+  }
+}
+@media (max-width: 450px) {
+  .xsPadding{
+    padding: 0px 5px;
+  }
 }

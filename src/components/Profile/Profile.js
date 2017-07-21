@@ -14,15 +14,15 @@ const Profile = ({user}) => (
       </a>
     </div>
     <div className={styles.otherInfo + ' clearfix'}>
-      <Col componentClass={ControlLabel} sm={4}>
+      <Col componentClass={ControlLabel} sm={4} className={styles.xsPadding}>
         <p className={styles.count}> {user.followers} </p>
         <p className={styles.text}> Followers </p>
       </Col>
-      <Col componentClass={ControlLabel} sm={4}>
+      <Col componentClass={ControlLabel} sm={4} className={styles.xsPadding}>
         <p className={styles.count}> {user.repos} </p>
         <p className={styles.text}> Repository </p>
       </Col>
-      <Col componentClass={ControlLabel} sm={4}>
+      <Col componentClass={ControlLabel} sm={4} className={styles.xsPadding}>
         <p className={styles.count}> {user.following} </p>
         <p className={styles.text}> Following </p>
       </Col>

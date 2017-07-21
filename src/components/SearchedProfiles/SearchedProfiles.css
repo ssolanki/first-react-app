@@ -19,3 +19,23 @@
   background: #fff;
   border-radius: 50%;
 }
+.heading{
+  font-size: 22px;
+}
+@media (max-width: 768px) {
+  .container{
+    width: 100%;
+    padding: 0px 15px;
+  }
+}
+@media (max-width: 450px) {
+  .seperator{
+    text-align: center;
+  }
+  .heading{
+    font-size: 20px;
+  }
+  .xsRow{
+    padding: 10px 5px;
+  }
+}

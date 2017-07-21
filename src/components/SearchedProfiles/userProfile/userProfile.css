@@ -16,5 +16,20 @@
 }
 .info{
   margin-left: 10px;
-
+}
+@media (max-width: 768px) {
+  .name{
+    font-size: 16px;
+  }
+  .info{
+    font-size: 14px;
+  }
+}
+@media (max-width: 450px) {
+  .name{
+    margin-left: 5px;
+  }
+  .info{
+    margin-left: 5px;
+  }
 }

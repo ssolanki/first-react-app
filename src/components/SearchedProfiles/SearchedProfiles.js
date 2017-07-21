@@ -10,17 +10,17 @@ const SearchedProfiles = ({userPairs}) => {
 
   return (
     <div className={styles.container}>
-      <h3> Your Searched Items ({userPairs.length}) : </h3>
+      <h3 className={styles.heading}> Your Matched Profiles ({userPairs.length}) : </h3>
       {userPairs.length
         ? userPairs.map(userPair => (
           <div key={i++} className={styles.userInfo + ' clearfix'}>
-            <Col mdOffset={1} md={4} sm={5}>
+            <Col mdOffset={1} md={4} sm={5} xs={12} className={styles.xsRow}>
               <UserProfile id={userPair.user1.id} user={userPair.user1} />
             </Col>
-            <Col componentClass={ControlLabel} md={1} sm={2}>
+            <Col componentClass={ControlLabel} sm={2} xs={12} className={styles.seperator}>
               <p className={styles.seperatorText}> vs </p>
             </Col>
-            <Col mdOffset={1} md={4} sm={5}>
+            <Col mdOffset={1} md={4} sm={5} xs={12} className={styles.xsRow}>
               <UserProfile id={userPair.user2.id} user={userPair.user2} />
             </Col>
           </div>
