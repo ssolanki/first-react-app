@@ -1,6 +1,7 @@
 const { resolve } = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
+const OfflinePlugin = require('offline-plugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const webpack = require('webpack')
@@ -38,6 +39,12 @@ module.exports = {
   performance: {
     hints: 'error'
   },
+  // resolve: {
+  //   alias: {
+  //     react: 'preact',
+  //     'react-dom': 'preact-compat'
+  //   }
+  // },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
@@ -46,6 +53,15 @@ module.exports = {
     }),
     new ExtractTextPlugin('style.[chunkhash:6].css'),
     new DashboardPlugin(),
+    new OfflinePlugin({
+      AppCache: {
+        events: true,
+        publicPath: '/appcache',
+        FALLBACK: {
+          '/': '/'
+        },
+      }
+    }),
     new webpack.optimize.CommonsChunkPlugin({
       'name': 'vendor'
     }),
