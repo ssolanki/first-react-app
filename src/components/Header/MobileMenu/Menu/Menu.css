@@ -1,0 +1,13 @@
+.open{
+  display: block;
+}
+
+.dropdownMenu{
+  left: auto;
+  right: -10px;
+}
+
+.listItem a.active{
+  color: #337ab7;
+  background: #e8e8e8;
+}

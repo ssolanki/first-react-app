@@ -43,6 +43,10 @@
   color: #24A3CF;
 }
 
+.desktopNav{
+  display: block;
+}
+
 .active{
   color: #fff;
   font-weight: bold;
@@ -61,5 +65,11 @@
   }
   .link{
     font-size: .8rem;
+  }
+  .list{
+    display: none;
+  }
+  .desktopNav{
+    display: none;
   }
 }
