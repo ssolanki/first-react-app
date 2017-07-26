@@ -52,7 +52,10 @@ module.exports = {
       filename: '200.html',
       template: './index.html'
     }),
-    new ExtractTextPlugin('style.[chunkhash:6].css'),
+    new ExtractTextPlugin({
+      filename: 'style.[chunkhash:6].css',
+      allChunks: true
+    }),
     new DashboardPlugin(),
     new OfflinePlugin({
       safeToUseOptionalCaches: true,

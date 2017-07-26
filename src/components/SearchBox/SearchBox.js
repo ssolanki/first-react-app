@@ -13,7 +13,7 @@ import Button from 'react-bootstrap/lib/Button'
 const SearchBox = ({text, id, onSubmit, onChange}) => (
   <div>
     <Form horizontal className={styles.searchBox + ' commentForm form-horizontal'} onSubmit={(e) => { e.preventDefault(); onSubmit(id) }}>
-      <FormGroup controlId='formHorizontalName'>
+      <FormGroup controlId={'formHorizontalName' + id}>
         <Col sm={4} className={styles.label}>
           <ControlLabel> Username{id} </ControlLabel>
         </Col>

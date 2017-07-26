@@ -33,7 +33,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: `${srcDir}/index.html`
     }),
-    new ExtractTextPlugin('style.[chunkhash:6].css'),
+    new ExtractTextPlugin({
+      filename: 'style.[chunkhash:6].css',
+      allChunks: true
+    }),
     new DashboardPlugin()
   ]
 }
