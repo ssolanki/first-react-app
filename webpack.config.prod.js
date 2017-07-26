@@ -10,7 +10,7 @@ const webpack = require('webpack')
 module.exports = {
   context: resolve(__dirname, 'src'),
   entry: {
-    app: `./index.js`,
+    app: './index.js',
     vendor: ['react', 'react-dom', 'react-router']
   },
   output: {
@@ -39,6 +39,12 @@ module.exports = {
   devtool: 'source-map',
   performance: {
     hints: 'error'
+  },
+  resolve: {
+    alias: {
+      react: 'preact-compat',
+      'react-dom' : 'preact-compat'
+    }
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
