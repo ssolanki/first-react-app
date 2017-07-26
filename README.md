@@ -35,12 +35,14 @@
 ### 3. Report
   ----
   1. Lighthouse Report
-
-  ![alt text](https://raw.githubusercontent.com/ssolanki/first-react-app/master/src/images/lighthouse_report.png)
-
+  <p align="center">
+    <img src="src/images/lighthouse_report.png" width="600">
+  </p>
+  
   2. Loading Time in 2G Device
-
-  ![alt text](https://raw.githubusercontent.com/ssolanki/first-react-app/master/src/images/loading_time.png)
+  <p align="center">
+    <img src="src/images/loading_time.png" width="600">
+  </p>
 
 ### 4. Todo
 ----
