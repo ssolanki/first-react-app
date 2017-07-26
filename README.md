@@ -13,7 +13,7 @@
 
 #### Production Deploy:
   After 1st and 2nd command run these commands to deploy on [Surge](https://surge.sh)
-  
+
   1. `npm run build`
   2. `npm run deploy`
   3. open [https://ssolanki.surge.sh](https://ssolanki.surge.sh) and go offline from dev tools and refresh.
@@ -32,7 +32,17 @@
   2. Go offline and click on app icon on home screen.
   3. Cheers!! Feel Native App Experience.
 
-### 3. Todo
+### 3. Report
+  ----
+  1. Lighthouse Report
+
+  ![alt text](https://raw.githubusercontent.com/ssolanki/first-react-app/master/src/images/lighthouse_report.png)
+
+  2. Loading Time in 2G Device
+
+  ![alt text](https://raw.githubusercontent.com/ssolanki/first-react-app/master/src/images/loading_time.png)
+
+### 4. Todo
 ----
   1. Support for `React-Redux`
   2. `SASS` support will be added
